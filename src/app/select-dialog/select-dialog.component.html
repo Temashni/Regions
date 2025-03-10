@@ -1,0 +1,35 @@
+<div class="header">
+  <button mat-icon-button class="icon-button" (click)="closeDialog()">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </button>
+
+  <p>Выбрать из списка</p>
+
+  <button mat-button class="tertiary-button" (click)="closeDialog()">Готово</button>
+</div>
+
+<mat-form-field class="w-full" appearance="outline">
+  <mat-icon matPrefix>search</mat-icon>
+  <input type="text" matInput [formControl]="search" />
+</mat-form-field>
+
+<div class="flex-col">
+  @for (item of filteredValues; track $index) {
+    @if (data.multiple) {
+    <mat-checkbox
+      (change)="onCheckboxChange($event.checked, item)"
+      [disableRipple]="true"
+      [checked]="checkItemChecked(item)"
+      class="custom-checkbox"
+    >
+      {{ item.name }}
+    </mat-checkbox>
+    }
+
+    @else {
+      <mat-radio-button (change)="onRadioChange(item)" [disableRipple]="true" [checked]="checkItemChecked(item)">
+        {{ item.name }}
+      </mat-radio-button>
+    } 
+  }
+</div>
