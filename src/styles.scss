@@ -1,1 +1,178 @@
-/* You can add global styles to this file, and also import other style files */
+html, body, app-root {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #121212;
+  color: #FFFFFF;
+}
+
+app-root {
+  padding: 0px 16px 12px;
+  width: 375px;
+  margin: 0 auto;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mt-4 {
+  margin-top: 4px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.pt-4 {
+  padding-top: 4px;
+}
+
+.pt-8 {
+  padding-top: 8px;
+}
+
+.pt-12 {
+  padding-top: 12px;
+}
+
+.pt-16 {
+  padding-top: 16px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pb-4 {
+  padding-bottom: 4px;
+}
+
+.pb-8 {
+  padding-bottom: 8px;
+}
+
+.pb-12 {
+  padding-bottom: 12px;
+}
+
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+// Dialog
+.mat-bottom-sheet-container {
+  height: 100vh !important;
+  max-height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  background: #121212 !important;
+}
+
+// Checkbox, Radio
+.mdc-checkbox__background {
+  border-radius: 50% !important;
+}
+
+.mdc-label {
+  color: #FFFFFF !important;
+}
+
+.mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background {
+  border-color: #DA7E3C !important;
+  background-color:  #DA7E3C !important;
+}
+
+.mdc-checkbox__background, .mat-mdc-radio-button .mdc-radio__outer-circle {
+  border: 2px solid #808080 !important;
+}
+
+.mat-mdc-checkbox .mdc-checkbox__ripple,
+.mat-mdc-radio-button .mat-radio-ripple  {
+  display: none !important;
+}
+
+.mat-mdc-radio-button .mdc-radio__native-control:enabled:checked+.mdc-radio__background>.mdc-radio__outer-circle,
+.mat-mdc-radio-button .mdc-radio__native-control:enabled:checked+.mdc-radio__background>.mdc-radio__inner-circle {
+  border-color: #DA7E3C !important;
+}
+
+.mat-mdc-radio-button .mdc-radio__native-control:checked+.mdc-radio__background>.mdc-radio__inner-circle {
+  transform: scale(0.57);
+}
+
+.mat-mdc-radio-button.mat-accent {
+  --mat-radio-checked-ripple-color: none !important;
+}
+
+// Input
+.mat-mdc-form-field-has-icon-prefix .mat-mdc-text-field-wrapper {
+  background: #2C2C2C !important;
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  display: none !important;
+}
+
+// Buttons
+.primary-button {
+  background-color: #DA7E3C!important;
+  color: #FFFFFF  !important;
+  padding: 13px 20px;
+  border-radius: 10px !important;
+}
+
+.secondary-button {
+  background-color: #4B4B4B !important;
+  color: #808080 !important;
+  padding: 13px 20px;
+  border-radius: 10px !important;
+}
+
+.tertiary-button {
+  background-color: none !important;
+  color: #DA7E3C  !important;
+  padding: 13px 20px;
+  border-radius: 10px !important;
+}
+
+.icon-button {
+  font-size: 0 !important;
+
+  &.mat-mdc-icon-button {
+    &:hover {
+      background: none !important;
+    }
+  }
+}
