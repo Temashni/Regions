@@ -1,0 +1,53 @@
+<div class="flex-col w-full">
+  <div class="pt-12 pb-12">
+    <h4 class="text-center">Добавить счет</h4>
+  </div>
+
+  @let multiplyRegions = form.controls.regions.value;
+  @let singleRegions = form.controls.region.value;
+
+  <div>
+    <div>
+      <h3>*Выберите не менее двух регионов</h3>
+
+      @if (multiplyRegions.length < 2) {
+      <button mat-flat-button class="w-full secondary-button mt-12" (click)="openMultiplySelect()">Выбрать</button>
+      }
+
+      <div class="badge-container mt-12">
+        @for (region of form.controls.regions.value; track $index) {
+          <app-badge [region]="region" />
+        }
+      </div>
+    </div>
+
+    <div class="mt-20">
+      <h3>*Выберите не менее одного регионов</h3>
+
+      @if (singleRegions.length < 1) {
+        <button mat-flat-button class="w-full secondary-button mt-12" (click)="openSingleSelect()">Выбрать</button>
+      }
+
+      <div class="badge-container mt-12">
+        @for (region of form.controls.region.value; track $index) {
+        <app-badge [region]="region" />
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w-full">
+  @if (form.invalid) {
+    <p class="text-center">Нужно заполнить поля, отмеченные *</p>
+  }
+
+  <button
+    mat-flat-button
+    class="w-full primary-button"
+    (click)="createReport()"
+    [disabled]="form.invalid"
+  >
+    Добавить отчет
+  </button>
+</div>
